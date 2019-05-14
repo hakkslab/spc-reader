@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/dxprog/spc-reader.svg)](https://travis-ci.org/dxprog/spc-reader)
+[![](https://coveralls.io/repos/github/dxprog/spc-reader/badge.svg)](https://coveralls.io/github/dxprog/spc-reader)
+
 # SpcReader
 
 SpcReader is a JS library for reading and parsing date from SPC700 files.

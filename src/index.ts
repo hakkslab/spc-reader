@@ -20,6 +20,11 @@ async function readFileAsync(fileName: string): Promise<Buffer> {
 }
 
 /**
+ * Export the common interfaces
+ */
+export { Emulator, IId666, ISpc } from './common';
+
+/**
  * Reads an SPC file and returns a parsed Spc object.
  *
  * @param spc File path or data of SPC file

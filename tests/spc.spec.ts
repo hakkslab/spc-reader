@@ -15,7 +15,10 @@ describe('Spc tests', () => {
     expect(spc.regY).to.eq(0x01, 'Y register failed');
     expect(spc.regPSW).to.eq(0x00, 'program status word failed');
     expect(spc.regSP).to.eq(0x0ff, 'stack pointer failed');
-    expect(spc.programData.length).to.eq(0x10000, 'program data failed');
-    expect(spc.dspRegisters.length).to.eq(0x80, 'DSP registers failed');
+
+    const spcMockBuffer = Buffer.alloc(0x10000, '10');
+    expect(spc.programData).to.eql(spcMockBuffer, 'program data failed');
+    const dspMockBuffer = Buffer.alloc(0x80, '01');
+    expect(spc.dspRegisters).to.eql(dspMockBuffer, 'DSP registers failed');
   });
 });

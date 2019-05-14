@@ -1,0 +1,30 @@
+{
+  "name": "spc-reader",
+  "version": "1.0.0",
+  "description": "JS library for reading SPC700 files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dxprog/spc-reader.git"
+  },
+  "keywords": [
+    "SNES",
+    "typescript"
+  ],
+  "author": "Matt Hackmann <matt@dxprog.com>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/dxprog/spc-reader/issues"
+  },
+  "homepage": "https://github.com/dxprog/spc-reader#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "typescript": "^3.4.5"
+  }
+}

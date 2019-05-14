@@ -51,4 +51,8 @@ describe('Spc tests', () => {
     const spc = new Spc(fileData);
     expect(spc.metadata).to.be.undefined;
   });
+
+  it('should throw an error for an invalid SPC', () => {
+    expect(() => new Spc(Buffer.from('Sup'))).to.throw('Not a valid SPC file', 'failed to throw error on bad SPC');
+  });
 });

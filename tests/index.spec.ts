@@ -25,4 +25,13 @@ describe('index tests', () => {
     const createdSpc: ISpc = await SpcReader(fileData);
     expect(createdSpc).to.eql(assertSpc);
   });
+
+  it('should catch and re-throw file read errors', async () => {
+    try {
+      await SpcReader(path.resolve(__dirname, 'fixtures/404'));
+      expect(true).to.eq(false, 'failed to rethrow file system error');
+    } catch (e) {
+      expect(e.message).to.contain('Error reading SPC file:');
+    }
+  });
 });

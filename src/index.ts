@@ -37,8 +37,13 @@ export default async function SpcReader(spc: string | Buffer): Promise<ISpc> {
     try {
       buffer = await readFileAsync(spc);
     } catch (e) {
-      throw new Error(`Error reading SPC file: ${e}`);
+      throw new Error(`Error reading SPC file: ${e.message}`);
     }
+  }
+
+  // One last type sanity check for non-TS land
+  if (!Buffer.isBuffer(buffer)) {
+    throw new Error('SpcReader requires either a string or a buffer to be passed.');
   }
 
   return new Spc(buffer);

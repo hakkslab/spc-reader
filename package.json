@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "JS library for reading SPC700 files",
   "main": "lib/index.js",
+  "engines": {
+    "node": ">= 10"
+  },
   "scripts": {
-    "test": "mocha -r ts-node/register tests/**/*.spec.ts",
-    "postinstall": "tsc"
+    "test": "nyc mocha --opts mocha.opts",
+    "postinstall": "tsc",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -26,10 +30,19 @@
     "@types/mocha": "^5.2.6",
     "@types/node": "^12.0.1",
     "chai": "^4.2.0",
+    "coveralls": "^3.0.3",
     "mocha": "^6.1.4",
+    "nyc": "^14.1.1",
+    "source-map-support": "^0.5.12",
     "ts-node": "^8.1.0"
   },
   "dependencies": {
     "typescript": "^3.4.5"
+  },
+  "nyc": {
+    "extension": [ ".ts" ],
+    "exclude": [ "**/*.d.ts", "coverage", "lib" ],
+    "reporter": [ "html" ],
+    "all": true
   }
 }

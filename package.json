@@ -2,9 +2,10 @@
   "name": "spc-reader",
   "version": "1.0.0",
   "description": "JS library for reading SPC700 files",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "mocha -r ts-node/register tests/**/*.spec.ts"
+    "test": "mocha -r ts-node/register tests/**/*.spec.ts",
+    "postinstall": "tsc"
   },
   "repository": {
     "type": "git",
@@ -23,12 +24,12 @@
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.6",
+    "@types/node": "^12.0.1",
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
-    "ts-node": "^8.1.0",
-    "typescript": "^3.4.5"
+    "ts-node": "^8.1.0"
   },
   "dependencies": {
-    "@types/node": "^12.0.1"
+    "typescript": "^3.4.5"
   }
 }

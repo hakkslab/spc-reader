@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 
+import { ISpc } from './common';
 import Spc from './spc';
 
 /**
@@ -30,7 +31,7 @@ export { Emulator, IId666, ISpc } from './common';
  * @param spc File path or data of SPC file
  * @returns {Spc} The parsed SPC object
  */
-export default async function SpcReader(spc: string | Buffer): Promise<Spc> {
+export default async function SpcReader(spc: string | Buffer): Promise<ISpc> {
   let buffer: Buffer = <Buffer>spc;
   if (typeof spc === 'string') {
     try {

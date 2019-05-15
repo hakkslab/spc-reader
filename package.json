@@ -1,6 +1,6 @@
 {
   "name": "spc-reader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JS library for reading SPC700 files",
   "main": "lib/index.js",
   "engines": {
@@ -28,7 +28,6 @@
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.6",
-    "@types/node": "^12.0.1",
     "chai": "^4.2.0",
     "coveralls": "^3.0.3",
     "mocha": "^6.1.4",
@@ -37,6 +36,7 @@
     "ts-node": "^8.1.0"
   },
   "dependencies": {
+    "@types/node": "^12.0.1",
     "typescript": "^3.4.5"
   },
   "nyc": {

@@ -47,6 +47,7 @@ regSP | `number` | The lower byte of the stack pointer.
 metadata | `IId666?` | Any ID666 metadata available. If there is none, is `undefined`.
 programData | `Uint8Array` | The SPC program data. Will always be 65,536 bytes.
 dspRegisters | `Uint8Array` | The DSP registers data. Will always be 128 bytes.
+iplRam | `Uint8Array` | The data from the IPL RAM area. Will always be 64 bytes.
 
 ### IId666
 

@@ -1,6 +1,6 @@
 {
   "name": "spc-reader",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "JS library for reading SPC700 files",
   "main": "lib/index.js",
   "engines": {

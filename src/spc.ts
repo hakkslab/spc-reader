@@ -27,6 +27,7 @@ export default class Spc implements ISpc {
   public metadata?: IId666;
   public programData: Uint8Array;
   public dspRegisters: Uint8Array;
+  public iplRam: Uint8Array;
 
   constructor(buffer: Buffer) {
     this.buffer = buffer;
@@ -47,6 +48,7 @@ export default class Spc implements ISpc {
     }
     this.programData = this.buffer.slice(0x100, 0x10100);
     this.dspRegisters = this.buffer.slice(0x10100, 0x10180);
+    this.iplRam = this.buffer.slice(0x101C0, 0x10200);
   }
 
   /**

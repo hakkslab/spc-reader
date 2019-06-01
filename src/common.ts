@@ -107,5 +107,10 @@ export interface ISpc {
    * DSP registers
    */
   dspRegisters: Uint8Array;
+
+  /**
+   * IPL RAM
+   */
+  iplRam: Uint8Array;
 }
 

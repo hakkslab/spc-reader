@@ -29,6 +29,8 @@ describe('Spc tests', () => {
     expect(spc.programData).to.eql(spcMockBuffer, 'program data failed');
     const dspMockBuffer = Buffer.alloc(0x80, '01');
     expect(spc.dspRegisters).to.eql(dspMockBuffer, 'DSP registers failed');
+    const iplMockBuffer = Buffer.alloc(0x40, 0x86);
+    expect(spc.iplRam).to.eql(iplMockBuffer, 'IPL RAM data failed');
   });
 
   it('should parse the ID666 metadata if the flag is set', () => {

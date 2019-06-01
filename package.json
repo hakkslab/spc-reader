@@ -1,6 +1,6 @@
 {
   "name": "spc-reader",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "JS library for reading SPC700 files",
   "main": "lib/index.js",
   "engines": {
@@ -40,9 +40,17 @@
     "typescript": "^3.4.5"
   },
   "nyc": {
-    "extension": [ ".ts" ],
-    "exclude": [ "**/*.d.ts", "coverage", "lib" ],
-    "reporter": [ "html" ],
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "coverage",
+      "lib"
+    ],
+    "reporter": [
+      "html"
+    ],
     "all": true
   }
 }

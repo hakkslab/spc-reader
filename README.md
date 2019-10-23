@@ -29,7 +29,7 @@ const anotherSpc: ISpc = await SpcReader(fs.readFileSync('blargg-stage.spc'));
 
 ## Public Exports
 
-In addition `SpcReader`, the following items are also exported for public use.
+In addition to `SpcReader`, the following items are also exported for public use.
 
 ### ISpc
 
